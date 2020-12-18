@@ -12,7 +12,7 @@ Then run the following:
 ```
 python flask_blog.py
 ```
-
+---
 
 ## Update 18-12-2020
 
