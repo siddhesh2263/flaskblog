@@ -25,3 +25,16 @@ secrets.token_hex(16)
 * Use of flask wtforms for making forms, performing validation.
 * Flash messages using bootstrap classes.
 * register and login html pages made in such a way that any design changes can be done easily.
+
+---
+
+## Update 20-12-2020
+
+* Introduction to Flask-SQLAlchemy - ORM (object relational mapping)
+* One to Many relationship between User and Post class
+* def __repr__ function
+* The database was populated using command line:
+```
+from flask_blog import db
+```
+
