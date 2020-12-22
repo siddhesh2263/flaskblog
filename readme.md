@@ -38,3 +38,10 @@ secrets.token_hex(16)
 from flask_blog import db
 ```
 
+---
+
+## Update 22-12-2020
+
+* Converting modules into package
+* This is done to avoid issues of circular imports.
+* The `init.py` file signifies that the folder is a package. It initialises the classes and other models at application startup.
