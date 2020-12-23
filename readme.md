@@ -45,3 +45,17 @@ from flask_blog import db
 * Converting modules into package
 * This is done to avoid issues of circular imports.
 * The `init.py` file signifies that the folder is a package. It initialises the classes and other models at application startup.
+
+---
+
+## Update 23-12-2020
+
+* Added user authentication with the help of the `login-flask` module
+* Added validation checks for username and email in forms.py
+* Used the `Bcrypt` module to hash passwords:
+```
+from flask_bcrypt import Bcrypt
+hashed_password = bcrypt.generate_password_hash('password').decode('utf-8')
+bcrypt.check_password_hash(hashed_password, 'password')
+# True
+```
