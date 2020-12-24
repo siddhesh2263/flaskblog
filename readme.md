@@ -59,3 +59,12 @@ hashed_password = bcrypt.generate_password_hash('password').decode('utf-8')
 bcrypt.check_password_hash(hashed_password, 'password')
 # True
 ```
+
+---
+
+## Update 24-12-2020
+
+* Updated Account settings page
+* Used the Pillow library  to compress image
+* Made a new UpdateAccountInfo form
+* Used the `os` and `secrets` package for saving and renaming pictures
