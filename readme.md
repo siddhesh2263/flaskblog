@@ -68,3 +68,14 @@ bcrypt.check_password_hash(hashed_password, 'password')
 * Used the Pillow library  to compress image
 * Made a new UpdateAccountInfo form
 * Used the `os` and `secrets` package for saving and renaming pictures
+
+
+---
+
+
+## Update 25-12-2020
+
+* Create, update and delete posts
+* Bootstrap Modals were used to provide confirmation before deleting posts
+* `url_for` is used a lot of times here
+* Check that only the current user is able to update/delete posts
