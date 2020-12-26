@@ -79,3 +79,13 @@ bcrypt.check_password_hash(hashed_password, 'password')
 * Bootstrap Modals were used to provide confirmation before deleting posts
 * `url_for` is used a lot of times here
 * Check that only the current user is able to update/delete posts
+
+
+---
+
+
+## Update 26-12-2020
+
+* Added pagination using Pagination method
+* Click on user, get posts by that user only
+* This was a complicated part, need to look into it more closely
