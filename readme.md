@@ -89,3 +89,34 @@ bcrypt.check_password_hash(hashed_password, 'password')
 * Added pagination using Pagination method
 * Click on user, get posts by that user only
 * This was a complicated part, need to look into it more closely
+
+
+--- 
+
+
+## Update 27-12-2020
+
+* Added password reset functionality, but there was this error that I currently cannot resolve:
+```
+    smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 84sm33253316pfy.9 - gsmtp')
+```
+
+* After turning off the "Allow less secure apps access feature", the problem won't go.
+
+* We discussed a way to securely store credentials in the environment variables, and then accessing them using the `os ` library:
+```
+import os
+id = os.environ.get('VARIABLE_NAME')
+```
+
+* This is done so that the credentials are not visible in the repositories.
+
+* Tokens are valid for a certain amount of time, and the duration can be modified:
+```
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+s = Serializer(app.config['SECRET_KEY'], expires_sec)
+token = s.dumps({'user_id': 1}).decode('utf-8')
+s.loads(token)
+```
+
+* The error needs to be looked into.
