@@ -12,6 +12,10 @@ C:.
     |   site.db
     |   __init__.py
     |   
+    +---errors
+    |       handlers.py
+    |       __init__.py
+    |       
     +---main
     |       routes.py
     |       __init__.py
@@ -32,18 +36,23 @@ C:.
     |           default.jpg
     |           
     +---templates
-    |       about.html
-    |       account.html
-    |       create_post.html
-    |       home.html
-    |       layout.html
-    |       login.html
-    |       post.html
-    |       register.html
-    |       reset_request.html
-    |       reset_token.html
-    |       user_post.html
-    |       
+    |   |   about.html
+    |   |   account.html
+    |   |   create_post.html
+    |   |   home.html
+    |   |   layout.html
+    |   |   login.html
+    |   |   post.html
+    |   |   register.html
+    |   |   reset_request.html
+    |   |   reset_token.html
+    |   |   user_post.html
+    |   |   
+    |   \---errors
+    |           403.html
+    |           404.html
+    |           500.html
+    |           
     \---users
             forms.py
             routes.py

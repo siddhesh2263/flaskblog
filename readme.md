@@ -144,3 +144,72 @@ are not bound to one single app instantition. Instead, the extensions can be ass
 * This is also called as the application factory pradigm.
 
 * Also added custom error pages.
+
+
+# Project Structure
+
+Folder PATH listing for volume WINDOWS
+Volume serial number is D2A9-984A
+
+```
+
+C:.
+|   readme.md
+|   requirements.txt
+|   run.py
+|   tree.txt
+|   
+\---flaskblog
+    |   config.py
+    |   models.py
+    |   site.db
+    |   __init__.py
+    |   
+    +---errors
+    |       handlers.py
+    |       __init__.py
+    |       
+    +---main
+    |       routes.py
+    |       __init__.py
+    |       
+    +---posts
+    |       forms.py
+    |       routes.py
+    |       __init__.py
+    |       
+    +---static
+    |   |   main.css
+    |   |   
+    |   \---profile_pics
+    |           6fa30d0af1a05251bcd4ac32cc7d3f98b5e54bde37d6b09e.jpg
+    |           99e348c7cd595dbfOutput.JPG
+    |           a591928c623c4bdfromain.jpg
+    |           ac0ac011793fdb0f5d8305b2e4818_thumb900.jpg
+    |           default.jpg
+    |           
+    +---templates
+    |   |   about.html
+    |   |   account.html
+    |   |   create_post.html
+    |   |   home.html
+    |   |   layout.html
+    |   |   login.html
+    |   |   post.html
+    |   |   register.html
+    |   |   reset_request.html
+    |   |   reset_token.html
+    |   |   user_post.html
+    |   |   
+    |   \---errors
+    |           403.html
+    |           404.html
+    |           500.html
+    |           
+    \---users
+            forms.py
+            routes.py
+            utils.py
+            __init__.py
+
+```
