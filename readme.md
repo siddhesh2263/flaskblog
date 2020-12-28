@@ -120,3 +120,25 @@ s.loads(token)
 ```
 
 * The error needs to be looked into.
+
+
+---
+
+
+## Update 28-12-2020
+
+* A lot of file restructring was done, and `Blueprints` were used.
+* Routes and functions related to user operation were shifted into the `users` package, posts operations were switched to `posts` package, and the remaining such as `home` and `about` pages were shifted into a `main` package.
+* We needed to update the `url_for()`, since routes were shifted to different packages.
+* We also created a `Config` class, which stores all the config data such as the `SECRET_KEY`, `DATABASE_URI` etc.
+* We created a function `create_app()`.
+* The purpose of the `create_app()` is to make sure that the extensions such as 
+```
+db = SQLAlchemy()
+bcrypt = Bcrypt()
+login_manager = LoginManager()
+mail = Mail()
+```
+are not bound to one single app instantition. Instead, the extensions can be associated with multiple instances of the app. This is done so that on initial app initialisation, the extensions don't get bound to a single app object.
+* Blueprints and Configuration is a efficient way to structre applications with huge codebase, and any future features can be added with ease.
+* This is also called as the application factory pradigm.
