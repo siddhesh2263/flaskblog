@@ -142,3 +142,5 @@ mail = Mail()
 are not bound to one single app instantition. Instead, the extensions can be associated with multiple instances of the app. This is done so that on initial app initialisation, the extensions don't get bound to a single app object.
 * Blueprints and Configuration is a efficient way to structre applications with huge codebase, and any future features can be added with ease.
 * This is also called as the application factory pradigm.
+
+* Also added custom error pages.
